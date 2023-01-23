@@ -1,5 +1,5 @@
 # GoRoutines & Channels
-- Go provides very good support for concurrency using `Go Routines or channels`.
+- Go provides very good support for concurrency using [Go Routines or channels](https://go.dev/tour/concurrency/1).
 - They take advantage of efficient memory management strategies and multicore processor architecture for implementing concurrency.
 - Go has first-class supports for Concurrency having the ability to use [multi-core processor architectures](GoRoutines.md) to the advantage of the developer and utilize memory efficiently.
 

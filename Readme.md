@@ -6,24 +6,24 @@
 # :star: Why is Golang fast compared to other languages?
 - Golang is faster than other programming languages because of its simple and efficient memory management and [concurrency model](GoRoutines.md).
 - The compilation process to machine code is very fast and efficient.
-- Additionally, the dependencies are linked to a `single binary file thereby putting off dependencies on servers`.
+- Additionally, the dependencies are linked to a single binary file thereby putting off dependencies on servers.
 - It also uses a compile-link model for generating executable binaries from the source code.
 
 # Key Features
 
-| Title                                                                                                    | Remarks |
-|----------------------------------------------------------------------------------------------------------|---------|
-| :star: [Coding Helpers & Guidelines in GoLang](CodingHelpers&GuidelinesGo.md)                            | -       |
-| [Types in GoLang](TypesGo.md)                                                                            | -       |
-| [Slices in GoLang](SlicesGo.md)                                                                          | -       |
-| [Pointers in GoLang](PointersGo.md)                                                                      | -       |
-| [OOPs in GoLang](OOPsGo.md)                                                                              | -       |
-| [Concurrency in GoLang](GoRoutines.md)                                                                   | -       |
-| [Panic & Recover in GoLang](Panics&Recover.md)                                                           | -       |
-| [Unit Testing in GoLang](UnitTestingGo.md)                                                               | -       |
-| [Labels in GoLang](https://medium.com/golangspec/labels-in-go-4ffd81932339)                              | -       |
-| [How to Work With SQL in GoLang?](https://betterprogramming.pub/how-to-work-with-sql-in-go-ca8bc0b30722) | -       |
-| [DB Transaction in GoLang](DBTransactionGo.md)                                                           | -       |
+| Title                                                                                                    | Remarks                                                                                                                                                                                                                                                                                         |
+|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :star: [Coding Helpers & Guidelines in GoLang](CodingHelpers&GuidelinesGo.md)                            | Coding Helpers and guidelines for coding in GoLang.                                                                                                                                                                                                                                             |
+| [Types in GoLang](TypesGo.md)                                                                            | Type parameters permit what is known as generic programming, in which functions and data structures are defined in terms of types that are specified later, when those functions and data structures are used.                                                                                  |
+| [Slices in GoLang](SlicesGo.md)                                                                          | Slice in Go is a lightweight data structure of variable length sequence for storing homogeneous data.                                                                                                                                                                                           |
+| [Pointers in GoLang](PointersGo.md)                                                                      | GoLang supports pointers using (*, & operators)                                                                                                                                                                                                                                                 |
+| [OOPs in GoLang](OOPsGo.md)                                                                              | Although Go has types and methods and allows an object-oriented style of programming, there is no type hierarchy.                                                                                                                                                                               |
+| [Concurrency in GoLang](GoRoutines.md)                                                                   | Go provides very good support for concurrency using [Go Routines or channels](https://go.dev/tour/concurrency/1)                                                                                                                                                                                |
+| [Panic & Recover in GoLang](Panics&Recover.md)                                                           | [Panic & Recover](https://golangbot.com/panic-and-recover/) is like exception in GoLang.                                                                                                                                                                                                        |
+| [Unit Testing in GoLang](UnitTestingGo.md)                                                               | GoLang supports unit testing using [Testing](https://pkg.go.dev/testing) package                                                                                                                                                                                                                |
+| [Labels in GoLang](https://medium.com/golangspec/labels-in-go-4ffd81932339)                              | Label is used in break and continue statement where it’s optional but it’s required in goto statement.                                                                                                                                                                                          |
+| [How to Work With SQL in GoLang?](https://betterprogramming.pub/how-to-work-with-sql-in-go-ca8bc0b30722) | [database/sql package](https://pkg.go.dev/database/sql) helps to query SQL databases.                                                                                                                                                                                                           |
+| [DB Transaction in GoLang](DBTransactionGo.md)                                                           | [Using Begin, Commit code](https://dev.to/techschoolguru/a-clean-way-to-implement-database-transaction-in-golang-2ba) block, [atomicity](https://github.com/Anshul619/System-Designs/blob/main/src/1_HLDDesignComponents/0_SystemGlossaries/Database/Atomicity.md) can be implemented in GoLang. |
 
 # :+1: What are the advantages of Golang over other languages?
 
@@ -57,7 +57,7 @@
 
 | Title                                                                                                                                                                           | Remarks |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| [Docker](../../1_HLDDesignComponents/6_ContainerOrchestrationServices/Docker/Readme.md) and [Kubernates](../../1_HLDDesignComponents/6_ContainerOrchestrationServices/Kubernates.md) are developed in [GoLang](https://go.dev/) | -       |
+| [Docker](https://github.com/Anshul619/System-Designs/blob/main/src/1_HLDDesignComponents/6_ContainerOrchestrationServices/Docker/Readme.md) and [Kubernates](https://github.com/Anshul619/System-Designs/blob/main/src/1_HLDDesignComponents/6_ContainerOrchestrationServices/Kubernates.md) are developed in [GoLang]() | -       |
 | Google's download server (dl.google.com), golang.org                                                                                                                            | -       |
 
 # What are Golang packages?

@@ -1,4 +1,4 @@
-# Go - Pass by Value
+# Go is "Pass by Value"
 - As in all languages in the C family, everything in Go is passed by value.
 - That is, a function always gets a copy of the thing being passed, as if there were an assignment statement assigning the value to the parameter.
 - For instance, passing an int value to a function makes a copy of the int, and passing a pointer value makes a copy of the pointer, but not the data it points to.
