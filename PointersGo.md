@@ -42,14 +42,14 @@ themes := make([]*Template, 0)
 theme := new(Theme) // Pointer to new Theme object
 ```
 
-# Map & Slices are like pointers
+# :star: Map & Slices are passed by reference
  
-Map and [slice values](SlicesGo.md) behave like pointers: 
+Map and [slice values](SlicesGo.md) are passed by reference 
 - They are descriptors that contain pointers to the underlying map or slice data.
 - i.e. If you pass a slice into a function, the function can modify its contents (*) and the modifications will be visible to the caller once it returns.
 - i.e. Copying a map or slice value doesn't copy the data it points to. Copying an interface value makes a copy of the thing stored in the interface value.
 
-Note:
+Important Note:
 - [Appending an element to the slice, will not reflect in the caller function](https://stackoverflow.com/questions/21035279/why-does-go-slice-append-not-take-a-reference). 
 - Hence, [either pointer needs to be used or new slice would have to be returned](https://stackoverflow.com/questions/52565597/cannot-append-to-slice-inside-a-function).
 
