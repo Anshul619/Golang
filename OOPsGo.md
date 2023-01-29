@@ -219,3 +219,4 @@ type I3 interface { // consumed by C4
 - [Frequently Asked Questions (FAQ)](https://go.dev/doc/faq)
 - [SOLID principle in GO](https://s8sg.medium.com/solid-principle-in-go-e1a624290346)
 - [SOLID Go Design](https://dave.cheney.net/2016/08/20/solid-go-design)
+- [Head First Design Patterns using Go](https://faun.pub/head-first-design-patterns-using-go-1-welcome-to-design-patterns-the-strategy-pattern-6cbd940e113a)
