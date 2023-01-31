@@ -5,9 +5,9 @@
 
 # Concurrency in GoLang
 
-| Construct                                | Description                                                                 | Sample Code                                                                          |
-|------------------------------------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [Mutex](https://gobyexample.com/mutexes) | We can use a mutex to safely access data across multiple goroutines.<br/>- Lock the mutex before accessing counters; unlock it at the end of the function using a defer statement. | type Test struct { mu sync.Mutex }<br/>- c.mu.Lock()<br/>- defer c.mu.Unlock()<br/>-c.counter++ |
+| Construct                                | Description                                                                 | Sample Code                                                                                      |
+|------------------------------------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| [Mutex](https://gobyexample.com/mutexes) | We can use a mutex to safely access data across multiple goroutines.<br/>- Lock the mutex before accessing counters; unlock it at the end of the function using a defer statement. | type Test struct { mu sync.Mutex }<br/>- c.mu.Lock()<br/>- defer c.mu.Unlock()<br/>- c.counter++ |
 
 # GoRoutines
 - [A Goroutine](https://go.dev/tour/concurrency/1) is a function or method which executes independently and simultaneously in connection with any other Goroutines present in your program.
