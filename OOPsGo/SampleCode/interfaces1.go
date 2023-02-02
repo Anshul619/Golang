@@ -1,7 +1,6 @@
-// Go program to illustrate the
-// concept of multiple interfaces
-
+// Go program to illustrate the concept of multiple interfaces
 // Link - https://www.geeksforgeeks.org/multiple-interfaces-in-golang/?ref=lbp
+
 package main
 
 import "fmt"

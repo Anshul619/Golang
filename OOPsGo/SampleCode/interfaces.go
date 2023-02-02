@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+// Area interface for achieving abstraction
+type Area interface {
+	Area() float32
+}
+
 // "Triangle" data type
 type Triangle struct {
 	base, height float32
@@ -30,11 +35,6 @@ func (square Square) Area() float32 {
 // To calculate area of rectangle
 func (rect Rectangle) Area() float32 {
 	return rect.length * rect.breadth
-}
-
-// Area interface for achieving abstraction
-type Area interface {
-	Area() float32
 }
 
 func main() {

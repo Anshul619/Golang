@@ -10,4 +10,17 @@ type Person struct {
   job string
   salary int
 }
+
+type Animal struct {
+   //..
+}
+
+func (a *Animal) Eat() {...}
+func (a *Animal) Sleep(){...}
+func (a *Animal) Run(){...}
+
+type Dog struct {
+    Animal
+    //..
+}
 ````

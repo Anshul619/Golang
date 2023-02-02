@@ -1,14 +1,19 @@
 # SOLID principles in GoLang
 
-| SOLID Principle                                                 | GoLang                                                                                                                                                                                                                                                     |
-|-----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Single Responsibility Principle                                 | Yes, through [struct](Structs.md)                                                                                                                                                                                                                                    |
-| Open/Closed Principle                                           | No concept of generalization (class-based inheritance). Reliability is available through [embedding & interfaces](Interfaces.md).                                                                                                                          |
-| Liskov substitution principle                                   | Instead of class-based inheritance, Golang provides a more powerful approach towards polymorphism via [Interfaces](Interfaces.md) and [Struct Embedding](Structs.md). <br/>- Go polymorphism involves creating many different data types that satisfy a common interface. |
-| Interface Segregation                                           | [Interfaces](Interfaces.md) can be defined in GoLang.                                                                                                                                                                                                      |
-| Dependency inversion principle                                  | Yes, through [interfaces](Interfaces.md) in GoLang.                                                                                                                                                                                                        |
+| Principle                                                   | GoLang Implementation                                                                                                                                                                                                                                                     |
+|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Single Responsibility Principle                             | Yes, through [struct](Structs.md)                                                                                                                                                                                                                                         |
+| Open/Closed Principle                                       | No concept of generalization (class-based inheritance). <br/>- Reliability is available through [embedding & interfaces](Interfaces.md).                                                                                                                                  |
+| Liskov substitution principle                               | Instead of class-based inheritance, Golang provides a more powerful approach towards polymorphism via [Interfaces](Interfaces.md) and [Struct Embedding](Structs.md). <br/>- Go polymorphism involves creating many different data types that satisfy a common interface. |
+| Interface Segregation                                       | [Interfaces](Interfaces.md) can be defined in GoLang.                                                                                                                                                                                                                     |
+| Dependency inversion principle                              | Yes, through [interfaces](Interfaces.md) in GoLang.                                                                                                                                                                                                                       |
 
 # Single Responsibility
+- Single responsibility principal aims to maintain a good level of Coupling that also maintains a good level of Cohesion.
+
+> “Do one thing and do it well” — McIlroy (Unix philosophy)
+
+## Example
 - CommandFactory and CommandExecutor are loosely coupled via Command module.
 
 ````go
@@ -59,8 +64,11 @@ func (ce CommandExecutor) Execute(command *Command) ([]byte, error) {
 - In Golang there is no concept of generalization.
 - Reusability is available as a form of [embedding](Interfaces.md).
 
-Let’s take the example of the CommandExecutor, which is responsible for executing Commands.
-- The Execute() and ValidateInput() methods need to handle each command separately.
+> “A module should be open for extensions, but closed for modification” — Robert C. Martin
+
+## Example
+- Let’s take the example of the CommandExecutor, which is responsible for executing Commands.
+- Execute() and ValidateInput() methods need to handle each command separately.
 - So every time a new command is added Execute() implementation needs to change.
 
 ````go
@@ -108,6 +116,8 @@ func (c BarCommand) Execute() ([]byte, error) {
 
 ## Liskov substitution principle
 
+> “Derived methods should expect no more and provide no less” — Robert C. Martin
+
 ````go
 type Command interface {
      Execute() ([]byte, error)
@@ -119,9 +129,11 @@ type CommandWithInput interface {
 }
 ````
 
-## GoLang - Interface segregation principle
+## Interface segregation principle
 - In Golang [interfaces](Interfaces.md) are satisfied implicitly, rather than explicitly, which makes it easier to extend a class behaviour by implementing [multiple interface](Interfaces.md) based on needs.
 - It also encourages to the design of small and reusable [interfaces](Interfaces.md).
+
+> “Many client specific interfaces are better than one general purpose interface” — Robert C. Martin
 
 ````go
 type I1 interface { // consumed by C1
@@ -137,6 +149,24 @@ type I3 interface { // consumed by C4
     M5()       // similarly M5() only used along with I1 and I2, thus not needed to have it in a separate interface
     I1
     I2
+}
+````
+
+## Dependency inversion principle
+
+> “Depend upon Abstractions. Do not depend upon concretions” — Robert C. Martin
+
+````go
+type CommandFactory struct {
+     decoder JsonDecoder // decoder decodes the command
+}// Create decode and validate the command
+func (cf CommandFactory) Create(encoded String) (Command, error) {
+    // decode command
+    command, err := cf.decoder.Decode(data)
+    if err != nil {
+        return nil, err
+    }
+    ...
 }
 ````
 
