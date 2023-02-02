@@ -10,7 +10,7 @@
 - [Interfaces](Interfaces.md) can be very lightweight with one or even zero methods can express a useful concept. 
 - Because there are no explicit relationships between [types](../TypesGo.md) and [interfaces](Interfaces.md), there is no type hierarchy to manage or discuss.
 
-# :star: Key Feature
+# :star: Key Features
 
 | Feature                                              | Remarks |
 |------------------------------------------------------|---------|
