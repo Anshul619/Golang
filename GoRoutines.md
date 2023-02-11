@@ -18,6 +18,8 @@
 - The control does not wait for Goroutine to complete their execution just like normal function they always move forward to the next line after the Goroutine call and ignores the value returned by the Goroutine.
 - Goroutines can communicate using the channel and these channels are specially designed to prevent race conditions when accessing shared memory using Goroutines.
 
+## Example1
+
 ````go
 // Go program to illustrate the concept of Goroutine
 package main
@@ -39,6 +41,22 @@ func main() {
 	// Calling normal function
 	display("GeeksforGeeks")
 }
+````
+
+## Example2
+
+````go
+var wg sync.WaitGroup
+var v int32 = 0 
+for i = 0; i < 100; i++{
+   wg.Add(1) //right place to put wg.add(1)
+   go func(){
+       defer wg.Done()
+       atomic.AddInt32(&v,1)
+   } 
+}
+wg.Wait()
+fmt.Println(v)
 ````
 
 # Difference between concurrent and parallelism in Golang
