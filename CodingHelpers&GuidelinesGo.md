@@ -54,6 +54,7 @@
 | [Get power of a number](https://stackoverflow.com/questions/64108933/how-to-use-math-pow-with-integers-in-golang)              | Int                             | int(math.Pow(float64(x), float64(y)))                                                                                                                             |
 | [Type Assertions - Typecast of generic interface to specific type](https://www.geeksforgeeks.org/type-assertions-in-golang/)   | Interfaces                      | t := i.(T) <br/>i.(int)                                                                                                                                           |
 | [Get type of a variable](https://gosamples.dev/print-type/)                                                                    | Interfaces                      | reflect.TypeOf(t1)                                                                                                                                                |
+
 # Bitwise Operators
 
 | Operator   | Description |

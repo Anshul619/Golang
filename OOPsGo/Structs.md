@@ -8,7 +8,7 @@ type Person struct {
   name string
   age int
   job string
-  salary int
+  Salary int //exported
 }
 
 type Animal struct {
@@ -24,3 +24,6 @@ type Dog struct {
     //..
 }
 ````
+
+# References
+- [Structures in Golang](https://www.geeksforgeeks.org/structures-in-golang/)

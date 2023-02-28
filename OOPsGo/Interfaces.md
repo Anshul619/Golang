@@ -19,6 +19,9 @@ func (r *rectangle) perim() float64 {
 } 
 ````
 
+# Interface names
+- By convention, one-method interfaces are named by the method name plus an -er suffix or similar modification to construct an agent noun: Reader, Writer, Formatter, CloseNotifier etc.
+
 # Embedding interface
 - In [embedding](https://www.geeksforgeeks.org/embedding-interfaces-in-golang/?ref=lbp), an interface can embed other interfaces or an interface can embed other interface’s method signatures in it.
 - You are allowed to embed any number of interfaces in a single interface. 
