@@ -1,5 +1,5 @@
 # What is Golang?
-- [Go](https://go.dev/) is a high level, general-purpose programming language that is [very strongly and statically typed](TypesGo.md) by providing support for garbage collection and [concurrent programming](GoRoutines&Channels.md).
+- [Go](https://go.dev/) is a high level, general-purpose programming language that is [very strongly and statically typed](OOPsGo/TypesGo.md) by providing support for garbage collection and [concurrent programming](GoRoutines&Channels.md).
 - Go technically is [pass by value](https://stackoverflow.com/questions/47296325/passing-by-reference-and-value-in-go-to-functions).
 - Go is a [case-sensitive language](https://en.wikipedia.org/wiki/Case_sensitivity).
 
@@ -13,10 +13,10 @@
 
 | Title                                                                                                    | Remarks                                                                                                                                                                                                                                                                                          |
 |----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :star: [Types in GoLang](OOPsGo/TypesGo.md)                                                              | Type parameters permit what is known as generic programming, in which functions and data structures are defined in terms of types that are specified later, when those functions and data structures are used.                                                                                   |
 | :star: [Coding Helpers & Guidelines in GoLang](CodingHelpers&GuidelinesGo.md)                            | Coding Helpers and guidelines for coding in GoLang.                                                                                                                                                                                                                                              |
 | :star: [Pointers in GoLang](PointersGo.md)                                                               | GoLang supports pointers using (*, & operators)                                                                                                                                                                                                                                                  |
-| :star: [Concurrency in GoLang](GoRoutines&Channels.md)                                                            | Go provides very good support for concurrency using [Go Routines or channels](https://go.dev/tour/concurrency/1)                                                                                                                                                                                 |
-| [Types in GoLang](TypesGo.md)                                                                            | Type parameters permit what is known as generic programming, in which functions and data structures are defined in terms of types that are specified later, when those functions and data structures are used.                                                                                   |
+| :star: [Concurrency in GoLang](GoRoutines&Channels.md)                                                   | Go provides very good support for concurrency using [Go Routines or channels](https://go.dev/tour/concurrency/1)                                                                                                                                                                                 |
 | [Slices in GoLang](SlicesGo.md)                                                                          | Slice in Go is a lightweight data structure of variable length sequence for storing homogeneous data.                                                                                                                                                                                            |
 | [OOPs in GoLang](OOPsGo/Readme.md)                                                                       | Although Go has types and methods and allows an object-oriented style of programming, there is no type hierarchy.                                                                                                                                                                                |
 | [Panic & Recover in GoLang](Panics&Recover.md)                                                           | [Panic & Recover](https://golangbot.com/panic-and-recover/) is like exception in GoLang.                                                                                                                                                                                                         |
@@ -35,7 +35,7 @@
 | Simple and Understandable      | Go was developed by keeping simplicity, maintainability and readability in mind.                                                                               |
 | Standard Powerful Library      | Go supports all standard libraries and packages that help in writing code easily and efficiently.                                                              |
 | :star: Support for concurrency | Go provides very good support for [concurrency using  Go Routines or channels](GoRoutines&Channels.md).                                                              |
-| Static Type Checking           | Go is a very strong and [statically typed programming language.](TypesGo.md)<br/>- This ensures that the code is type-safe and all type conversions are handled efficiently. |
+| Static Type Checking           | Go is a very strong and [statically typed programming language.](OOPsGo/TypesGo.md)<br/>- This ensures that the code is type-safe and all type conversions are handled efficiently. |
 | Easy to install binaries       | Go provides support for generating binaries for the applications with all required dependencies.                                                                                                                                                             |
 | Good Testing Support           | Go has good support for [writing unit test cases](UnitTestingGo.md) along with our code.                                                                                                                                                               |
 
@@ -133,6 +133,37 @@ func main() {
 	fmt.Println(counter())	
 }
 ````
+
+# Scan Function in GoLang
+- The [Scan function](https://www.educative.io/answers/what-is-the-scan-function-in-golang) in the Go programming language is used to read data from the standard input, format the string, and store the resultant strings into the destinations specified by the additional arguments.
+
+````go
+package main
+ 
+import (
+    "fmt"
+)
+ 
+func main() {
+ 
+  var name string
+  var unit string
+  var amount int
+  var temp string
+
+  // taking input and storing in variable using a sample input string would be:
+  // "Faraz owns 500 acres of land"
+  fmt.Scan(&name, &temp, &amount, &unit)
+ 
+  // print out new string using the extracted values 
+  fmt.Printf ("% d %s of land is owned by %s\n",amount, unit, name);
+}
+````
+
+# Format the string
+- In Go, the %s verb is used to format a string. 
+- When used with a custom type that has a String() method defined, the String() method will be automatically called and its return value will be used in the formatted string.
+
 # References
 - [Frequently Asked Questions (FAQ)](https://go.dev/doc/faq)
 - [Golang Interview Questions](https://www.interviewbit.com/golang-interview-questions/)

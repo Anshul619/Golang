@@ -2,6 +2,7 @@
 - In Go, the programs are built by using packages that help in managing the dependencies efficiently.
 - The package is declared at the top of the Go source file as `package <package_name>`.
 - The packages can be imported to our source file by writing: `import <package_name>`.
+- :star: Files in the same package can freely call functions defined in other files.
 
 ![img.png](assests/gopackages_img.png)
 

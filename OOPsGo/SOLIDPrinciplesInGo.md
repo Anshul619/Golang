@@ -1,13 +1,3 @@
-# SOLID principles in GoLang
-
-| Principle                                                   | GoLang Implementation                                                                                                                                                                                                                                                     |
-|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Single Responsibility Principle                             | Yes, through [struct](Structs.md)                                                                                                                                                                                                                                         |
-| Open/Closed Principle                                       | No concept of generalization (class-based inheritance). <br/>- Reliability is available through [embedding & interfaces](Interfaces.md).                                                                                                                                  |
-| Liskov substitution principle                               | Instead of class-based inheritance, Golang provides a more powerful approach towards polymorphism via [Interfaces](Interfaces.md) and [Struct Embedding](Structs.md). <br/>- Go polymorphism involves creating many different data types that satisfy a common interface. |
-| Interface Segregation                                       | [Interfaces](Interfaces.md) can be defined in GoLang.                                                                                                                                                                                                                     |
-| Dependency inversion principle                              | Yes, through [interfaces](Interfaces.md) in GoLang.                                                                                                                                                                                                                       |
-
 # Single Responsibility
 - Single responsibility principal aims to maintain a good level of Coupling that also maintains a good level of Cohesion.
 
