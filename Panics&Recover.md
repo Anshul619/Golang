@@ -43,6 +43,13 @@ func (e *errorString) Error() string {
 }
 ````
 
+# Types of Error Logging
+
+| Log                | Description                           |
+|--------------------|---------------------------------------|
+| log.Fatal("error") | Program will print error and exit     |
+| log.Error("error") | Program will print error but NOT exit |
+
 # Recovering from a Panic
 - [recover](https://golangbot.com/panic-and-recover/#recoveringfromapanic) is a builtin function that is used to regain control of a panicking program.
 

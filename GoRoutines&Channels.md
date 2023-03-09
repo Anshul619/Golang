@@ -3,15 +3,15 @@
 - They take advantage of efficient memory management strategies and [multicore processor architecture](https://www.techtarget.com/searchdatacenter/definition/multi-core-processor) for implementing concurrency.
 - Go has first-class supports for Concurrency having the ability to use [multi-core processor architectures](https://www.techtarget.com/searchdatacenter/definition/multi-core-processor) to the advantage of the developer and utilize memory efficiently.
 
-# Concurrency in GoLang
+# Constructs
 
 | Construct                                                  | Description                                                                                                                                                                        | Sample Code                                                                                      |
 |------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | [Mutex](https://gobyexample.com/mutexes)                   | We can use a mutex to safely access data across multiple goroutines.<br/>- Lock the mutex before accessing counters; unlock it at the end of the function using a defer statement. | type Test struct { mu sync.Mutex }<br/>- c.mu.Lock()<br/>- defer c.mu.Unlock()<br/>- c.counter++ |
-| [var wg sync.WaitGroup](https://pkg.go.dev/sync#WaitGroup) | A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for.                                              |
-| wg.Add(1)                                                  | Always call wg.Add() before you launch the goroutine that will call wg.Done().                                                                                                     |
-| wg.Done()                                                  | Recommended to call WaitGroup.Done() deferred, so it gets called even if the goroutine panics.                                                                                     |
-| wg.Wait()                                                  | wg.Wait() will block until wg.Done() is called.                                                                                                                                    |
+| [var wg sync.WaitGroup](https://pkg.go.dev/sync#WaitGroup) | A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for.                                              | -                                                                                                |
+| wg.Add(1)                                                  | Always call wg.Add() before you launch the goroutine that will call wg.Done().                                                                                                     | -                                                                                                |
+| wg.Done()                                                  | Recommended to call WaitGroup.Done() deferred, so it gets called even if the goroutine panics.                                                                                     | -                                                                                                |
+| wg.Wait()                                                  | wg.Wait() will block until wg.Done() is called.                                                                                                                                    | -                                                                                                |
 
 # GoRoutines
 - [A Goroutine](https://go.dev/tour/concurrency/1) is a function or method which executes independently and simultaneously in connection with any other Goroutines present in your program. ([asynchronous function execution](https://medium.com/@gauravsingharoy/asynchronous-programming-with-go-546b96cd50c1))
@@ -62,7 +62,7 @@ func main() {
 }
 ````
 
-# What are Go channels and how are channels used in Golang?
+# Go Channels (to communicate b/w go routines)
 - Channels are a typed conduit through which you can send and receive values with the channel operator, <-.
 - By default, sends and receives block until the other side is ready. 
 - This allows goroutines to synchronize without explicit locks or condition variables.
@@ -71,23 +71,59 @@ func main() {
 
 [Read more](https://www.geeksforgeeks.org/channel-in-golang/)
 
-## Create Channel
+| Title                                        | Code                                                      |
+|----------------------------------------------|-----------------------------------------------------------|
+| Create Channel                               | Mychannel:= make(chan Type)<br/>- var Mychannel chan Type |
+| Send data to Channel                         | Mychannel <- element // Send data to Mychannel            |
+| Receive data from Mychannel - BLOCKING CALL. | element := <-Mychannel<br/>- log.Println(<-Mychannel)     |
 
-```go
-var Mychannel chan Type
+## Example Code
 
-OR 
+````go
+package main
 
-Mychannel:= make(chan Type)
-```
+import (
+	"log"
+	"net/http"
+	"time"
+)
 
-## Send data to Channel
+func main() {
+	links := []string{
+		"http://facebook.com",
+		"http://linkedin.com",
+		"http://google.com",
+	}
 
-```go
-Mychannel <- element // Send data to Mychannel
+	c := make(chan string)
 
-element := <-Mychannel // Receive data from Mychannel
-```
+	for _, link := range links {
+		go checkLinkStatus(link, c)
+	}
+
+	for l := range c {
+		go func(url string) {
+			time.Sleep(time.Second)
+			checkLinkStatus(url, c)
+		}(l)
+
+		//go checkLinkStatus(<-c, c)
+		//log.Println(<-c)
+	}
+}
+
+func checkLinkStatus(url string, c chan string) {
+
+	if _, err := http.Get(url); err != nil {
+		log.Println(url, "is down")
+		c <- url
+		return
+	}
+
+	c <- url
+	log.Println(url, "is up")
+}
+````
 
 # Select Statement in Golang
 - [Golang select statement](https://golangdocs.com/select-statement-in-golang) is like the switch statement, which is used for multiple channels operation.
@@ -126,12 +162,14 @@ func main() {
 }
 ````
 
-# Difference between concurrent and parallelism in Golang
+# Concurrency is not Parallelism
+
+## :star: Difference between concurrent and parallelism in Golang
 - Concurrency is when your program can handle multiple tasks at once while parallelism is when your program can execute multiple tasks at once using multiple processors.
-- In other words, concurrency is a property of a program that allows you to have multiple tasks in progress at the same time, but not necessarily executing at the same time.
+- In other words, concurrency is a property of a program that allows you to have multiple tasks in progress at the same time, but not necessarily executing at the same time. (i.e. instead of keeping idle while waiting for the blocking call, we optimize and execute another code.)
 - Parallelism is a runtime property where two or more tasks are executed at the same time.
 
-# Why doesn't my program run faster with more CPUs?
+## Why doesn't my program run faster with more CPUs?
 - Whether a program runs faster with more CPUs depends on the problem it is solving. 
 - The Go language provides concurrency primitives, such as goroutines and channels, but concurrency only enables parallelism when the underlying problem is intrinsically parallel. 
 - Problems that are intrinsically sequential cannot be sped up by adding more CPUs, while those that can be broken into pieces that can execute in parallel can be sped up, sometimes dramatically.
@@ -140,8 +178,8 @@ Sometimes adding more CPUs can slow a program down.
 - In practical terms, programs that spend more time synchronizing or communicating than doing useful computation may experience performance degradation when using multiple OS threads. 
 - This is because passing data between threads involves switching contexts, which has significant cost, and that cost can increase with more CPUs.
 
-# How can I control the number of CPUs?
-- The number of CPUs available simultaneously to executing goroutines is controlled by the GOMAXPROCS shell environment variable, whose default value is the number of CPU cores available.
+## How can I control the number of CPUs?
+- The number of CPUs available simultaneously to executing goroutines is controlled by the [GOMAXPROCS](https://pkg.go.dev/runtime) shell environment variable, whose default value is the number of CPU cores available.
 - Programs with the potential for parallel execution should therefore achieve it by default on a multiple-CPU machine.
 
 # References
