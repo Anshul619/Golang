@@ -164,6 +164,29 @@ func main() {
 - In Go, the %s verb is used to format a string. 
 - When used with a custom type that has a String() method defined, the String() method will be automatically called and its return value will be used in the formatted string.
 
+# Variadic Functions in Go
+- The function that is called with the varying number of arguments is known as variadic function.
+
+`````go
+function function_name(para1, para2...type)type {// code...}
+`````
+
+# Switch
+- One interesting thing about [switch statements](https://exercism.org/tracks/go/exercises/blackjack/edit), is that the value after the switch keyword can be omitted, and we can have boolean conditions for each case.
+
+````go
+age := 21
+
+switch {
+case age > 20 && age < 30:
+    // do something if age is between 20 and 30
+case age == 10:
+    // do something if age is equal to 10
+default:
+    // do something else for every other case
+}
+````
+
 # References
 - [Frequently Asked Questions (FAQ)](https://go.dev/doc/faq)
 - [Golang Interview Questions](https://www.interviewbit.com/golang-interview-questions/)

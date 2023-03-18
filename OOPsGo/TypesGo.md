@@ -8,10 +8,11 @@
 
 # Features
 
-| Feature         | Description                                                                                      | Example Code          |
-|-----------------|--------------------------------------------------------------------------------------------------|-----------------------|
-| Type Assertion  | Type casting of the generic interface to the specific type, is done like `.(SpecificTypeObj)`.   | t := i.(T)            |
-| Type Conversion | Convert a type to another type                                                                   | t := []byte("String") |
+| Feature                                                                    | Description                                                                                                                                                                                                 | Example Code                                                                 |
+|----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [Type Assertion](https://www.geeksforgeeks.org/type-assertions-in-golang/) | Type casting of the generic interface to the specific type, is done like `interfaceVariable.(concreteType)`.                                                                                                | var input interface{} = 123<br/>str := input.(string)                        |
+| Type Conversion                                                            | Convert a type to another type                                                                                                                                                                              | t := []byte("String")                                                        |
+| [Type Switches](https://exercism.org/tracks/go/concepts/type-assertion)                                                              | A type switch can perform several type assertions in a row. It has the same syntax as a type assertion (interfaceVariable.(concreteType)), but instead of a specific concreteType it uses the keyword type. | var i interface{} = 12<br/>switch v := i.(type) {case int:<br/>case string:} |
 
 # Is it possible to declare variables of different types in a single line of code in Golang?
 
