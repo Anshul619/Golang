@@ -3,6 +3,7 @@
 - The package is declared at the top of the Go source file as `package <package_name>`.
 - The packages can be imported to our source file by writing: `import <package_name>`.
 - :star: Files in the same package can freely call functions defined in other files.
+- Struct, methods of the package are referenced using dot operator `.`. 
 
 ![img.png](assests/gopackages_img.png)
 
