@@ -47,11 +47,11 @@
 | Open Source     | [Kubernates](https://github.com/Anshul619/System-Designs/blob/main/src/1_HLDDesignComponents/6_ContainerOrchestrationServices/Kubernates.md) is developed in [GoLang]() |
 | Google          | Google's download server (dl.google.com), golang.org.                                                                                                                   |
 | Google          | Google Chrome and Google Earth were created in this way. It is also used in YouTube and Google App Engine.                                                              |
-| Uber            | Geofence service, which serves the user’s location and product availability.                                                                                            |
+| Uber            | [Geofence service](https://www.uber.com/en-IN/blog/go-geofence-highest-query-per-second-service/), which serves the user’s location and product availability.                                                                                            |
 | Twitch          | Go enabled Twitch to improve 20 times the GC (garbage collection) factor responsible for automatically managing dynamically allocated memory.                           |
 | Dailymotion     | Automation of APIs, tests has been improved.                                                                                                                            |
 | SendGrid        | Simultaneous asynchronous programming<br/>- reduced maintenance costs and resolved concurrency problems<br/>- efficiently process over 500 million messages a day       |
-| Dropbox         | -                                                                                                                                                                       |
+| Dropbox         | [Dropbox](https://dropbox.tech/infrastructure/open-sourcing-our-go-libraries) uses GoLang.                                                                                                                                                                      |
 | SoundCloud      | Static typing and fast compilation enabled by Go.                                                                                                                       |
 
 
