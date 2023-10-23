@@ -30,31 +30,14 @@
 
 # :+1: What are the advantages of Golang over other languages?
 
-| Advantage                      | Description                                                                                                                                                    |
-|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Simple and Understandable      | Go was developed by keeping simplicity, maintainability and readability in mind.                                                                               |
-| Standard Powerful Library      | Go supports all standard libraries and packages that help in writing code easily and efficiently.                                                              |
-| :star: Support for concurrency | Go provides very good support for [concurrency using  Go Routines or channels](GoRoutines&Channels.md).                                                              |
+| Advantage                      | Description                                                                                                                                                                         |
+|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Simple and Understandable      | Go was developed by keeping simplicity, maintainability and readability in mind.                                                                                                    |
+| Standard Powerful Library      | Go supports all standard libraries and packages that help in writing code easily and efficiently.                                                                                   |
+| :star: Support for concurrency | Go provides very good support for [concurrency using  Go Routines or channels](GoRoutines&Channels.md).                                                                             |
 | Static Type Checking           | Go is a very strong and [statically typed programming language.](OOPsGo/TypesGo.md)<br/>- This ensures that the code is type-safe and all type conversions are handled efficiently. |
-| Easy to install binaries       | Go provides support for generating binaries for the applications with all required dependencies.                                                                                                                                                             |
-| Good Testing Support           | Go has good support for [writing unit test cases](UnitTestingGo.md) along with our code.                                                                                                                                                               |
-
-# Who uses GoLang?
-
-| Company         | Title                                                                                                                                                                   |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Docker - Open Source     | [Docker](https://github.com/Anshul619/System-Designs/blob/main/src/1_HLDDesignComponents/6_ContainerOrchestrationServices/Docker/Readme.md) is developed in [GoLang]()  |
-| K8s - Open Source     | [Kubernates](https://github.com/Anshul619/System-Designs/blob/main/src/1_HLDDesignComponents/6_ContainerOrchestrationServices/Kubernates.md) is developed in [GoLang]() |
-| Google          | Google's download server (dl.google.com), golang.org.                                                                                                                   |
-| Google          | Google Chrome and Google Earth were created in this way. It is also used in YouTube and Google App Engine.                                                              |
-| Uber            | [Geofence service](https://www.uber.com/en-IN/blog/go-geofence-highest-query-per-second-service/), which serves the user’s location and product availability.                                                                                            |
-| Twitch          | Go enabled Twitch to improve 20 times the GC (garbage collection) factor responsible for automatically managing dynamically allocated memory.                           |
-| Dailymotion     | Automation of APIs, tests has been improved.                                                                                                                            |
-| SendGrid        | Simultaneous asynchronous programming<br/>- reduced maintenance costs and resolved concurrency problems<br/>- efficiently process over 500 million messages a day       |
-| Dropbox         | [Dropbox](https://dropbox.tech/infrastructure/open-sourcing-our-go-libraries) uses GoLang.                                                                                                                                                                      |
-| SoundCloud      | Static typing and fast compilation enabled by Go.                                                                                                                       |
-| Paypal      | [Golang at PayPal For Modernizing And Scaling](https://www.linkedin.com/pulse/golang-paypal-modernizing-scaling-reemi-shirsath/) |
-
+| Easy to install binaries       | Go provides support for generating binaries for the applications with all required dependencies.                                                                                    |
+| Good Testing Support           | Go has good support for [writing unit test cases](UnitTestingGo.md) along with our code.                                                                                            |
 
 # What do you understand by Golang string literals?
 - String literals are those variables storing string constants that can be a single character or that can be obtained as a result of the concatenation of a sequence of characters. 

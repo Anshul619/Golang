@@ -12,13 +12,13 @@ func TestFoo(t *testing.T) {
 
 # Conventions
 
-| Instruction                                                                           | Remarks                                                          |
-|---------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| Test files in Go  end in `_test.go`                                                   | -                                                                |
-| Individual tests are identified by function names matching `^Test[A-Z]`               | -                                                                |
-| You can run subtests by `t.Run()`                                                     | -                                                                |
+| Instruction                                                                           | Remarks                                                       |
+|---------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| Test files in Go  end in `_test.go`                                                   |                                                               |
+| Individual tests are identified by function names matching `^Test[A-Z]`               |                                                               |
+| You can run subtests by `t.Run()`                                                     |                                                               |
 | You log the error and mark the test failed by calling `t.Errorf()` or `t.Fatal()`.    | Fatal is equivalent to Print() followed by a call to os.Exit(1). |
-| go test -v                                                                            | Print out the tests it is running                                |
+| go test -v                                                                            | Print out the tests it is running                             |
 
 
 # References
