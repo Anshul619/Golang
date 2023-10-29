@@ -16,3 +16,5 @@
 | Go module proxy at Grab | [Read more](https://engineering.grab.com/go-module-proxy)                                                                                                               |
 | Zomato                  |                                                                                                                                                                         |
 | Swiggy                  |                                                                                                                                                                         |
+| Prometheus                  | [Read more](https://logz.io/blog/prometheus-influxdb/)                                                                                                                                                                        |
+| InfluxDB                  | [Read more](https://logz.io/blog/prometheus-influxdb/)                                                                                                                                                                         |
