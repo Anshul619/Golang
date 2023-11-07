@@ -14,7 +14,8 @@
 | SoundCloud              | Static typing and fast compilation enabled by Go.                                                                                                                       |
 | Paypal                  | [Golang at PayPal For Modernizing And Scaling](https://www.linkedin.com/pulse/golang-paypal-modernizing-scaling-reemi-shirsath/)                                        |
 | Go module proxy at Grab | [Read more](https://engineering.grab.com/go-module-proxy)                                                                                                               |
+| Prometheus              | [Read more](https://logz.io/blog/prometheus-influxdb/)                                                                                                                  |
+| InfluxDB                | [Read more](https://logz.io/blog/prometheus-influxdb/)                                                                                                                  |
+| GoJek                   | [Ruby? Java? Golang? - How do you choose a language?](https://www.gojek.io/blog/ruby-java-golang)                                                                                                                 |
 | Zomato                  |                                                                                                                                                                         |
 | Swiggy                  |                                                                                                                                                                         |
-| Prometheus                  | [Read more](https://logz.io/blog/prometheus-influxdb/)                                                                                                                                                                        |
-| InfluxDB                  | [Read more](https://logz.io/blog/prometheus-influxdb/)                                                                                                                                                                         |

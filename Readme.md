@@ -9,6 +9,8 @@
 - Additionally, the dependencies are linked to a single binary file thereby putting off dependencies on servers.
 - It also uses a compile-link model for generating executable binaries from the source code.
 
+> To put it simply, if Docker had not been written in Go, it would not have been as successful. ~Solomon Hykes
+
 # Key Features
 
 | Title                                                                                                    | Remarks                                                                                                                                                                                                                                                                                          |
