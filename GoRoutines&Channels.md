@@ -2,6 +2,7 @@
 - Go provides very good support for concurrency using [Go Routines or channels](https://go.dev/tour/concurrency/1).
 - They take advantage of efficient memory management strategies and [multicore processor architecture](https://www.techtarget.com/searchdatacenter/definition/multi-core-processor) for implementing concurrency.
 - Go has first-class supports for Concurrency having the ability to use [multi-core processor architectures](https://www.techtarget.com/searchdatacenter/definition/multi-core-processor) to the advantage of the developer and utilize memory efficiently.
+- Roughly 100K go routines can run on a single machine.
 
 # Constructs
 
