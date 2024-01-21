@@ -5,25 +5,6 @@
 # Return errors 
 - [Errors](https://golangbot.com/custom-errors/) can be returned as multiple values from a function in Go
 
-```go
-
-package main
-import (
-	"fmt"
-)
-
-func reverseValues(a,b string)(string, string){
-    return b,a    //notice how multiple values are returned
-}
-
-func main(){
-    val1,val2:= reverseValues("interview","bit")    // notice how multiple values are assigned
-    fmt.Println(val1, val2)
-}
-```
-
-# Custom Errors in GoLang
-
 ````go
 package errors
 
@@ -49,6 +30,16 @@ func (e *errorString) Error() string {
 |--------------------|---------------------------------------|
 | log.Fatal("error") | Program will print error and exit     |
 | log.Error("error") | Program will print error but NOT exit |
+
+# Defer
+- A [defer](https://go.dev/tour/flowcontrol/12) statement defers the execution of a function until the surrounding function returns.
+- The deferred call's arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.
+
+## Not use defer in for-loop
+- Don’t [defer](http://go-database-sql.org/retrieving.html) within a loop.
+- A deferred statement doesn't get executed until the function exits, so a long-running function shouldn’t use it.
+- If you do, you will slowly accumulate memory.
+- If you are repeatedly querying and consuming result sets within a loop, you should explicitly call rows.Close() when you’re done with each result, and not use defer.
 
 # Recovering from a Panic
 - [recover](https://golangbot.com/panic-and-recover/#recoveringfromapanic) is a builtin function that is used to regain control of a panicking program.
@@ -87,3 +78,39 @@ func main() {
 ````
 
 [Read more](https://golangbot.com/panic-and-recover/#recoveringfromapanic)
+
+# Error Group in GoRoutines
+- [Error Group](https://pkg.go.dev/golang.org/x/sync/errgroup) is used to return errors in goRoutines.
+
+````go
+package main
+
+import (
+        "context"
+        "fmt"
+        "math/rand"
+        "time"
+
+        "golang.org/x/sync/errgroup"
+)
+
+func fetchAll(ctx context.Context) error {
+        errs, ctx := errgroup.WithContext(ctx)
+
+        // run all the http requests in parallel
+        for i := 0; i < 4; i++ {
+                errs.Go(func() error {
+                        // pretend this does an http request and returns an error                                                  
+                        time.Sleep(time.Duration(rand.Intn(100)) * time.Millisecond)                                               
+                        return fmt.Errorf("error in go routine, bailing")                                                      
+                })
+        }
+
+        // Wait for completion and return the first error (if any)                                                                 
+        return errs.Wait()
+}
+
+func main() {
+        fmt.Println(fetchAll(context.Background()))
+}
+````
