@@ -34,3 +34,4 @@ go tool cover -html=coverage.out
 
 # References
 - [How to write unit tests in GoLang?](https://blog.alexellis.io/golang-writing-unit-tests/)
+- [Comprehensive Guide to Testing in Go](https://blog.jetbrains.com/go/2022/11/22/comprehensive-guide-to-testing-in-go/)
