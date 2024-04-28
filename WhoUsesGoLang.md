@@ -1,6 +1,6 @@
 # Who uses GoLang?
 
-| Company                 | Remarks                                                                                                                                                                 |
+| Product/Company         | Remarks                                                                                                                                                                 |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Docker - Open Source    | [Docker](https://github.com/Anshul619/System-Designs/blob/main/src/1_HLDDesignComponents/6_ContainerOrchestrationServices/Docker/Readme.md) is developed in [GoLang]()  |
 | K8s - Open Source       | [Kubernates](https://github.com/Anshul619/System-Designs/blob/main/src/1_HLDDesignComponents/6_ContainerOrchestrationServices/Kubernates.md) is developed in [GoLang]() |
@@ -14,8 +14,10 @@
 | SoundCloud              | Static typing and fast compilation enabled by Go.                                                                                                                       |
 | Paypal                  | [Golang at PayPal For Modernizing And Scaling](https://www.linkedin.com/pulse/golang-paypal-modernizing-scaling-reemi-shirsath/)                                        |
 | Go module proxy at Grab | [Read more](https://engineering.grab.com/go-module-proxy)                                                                                                               |
+| Grafana                 |                                                                                                                                                                         |
+| Loki                    |                                                                                                                                                                         ||                         |                                                                                                                                                                         |
 | Prometheus              | [Read more](https://logz.io/blog/prometheus-influxdb/)                                                                                                                  |
 | InfluxDB                | [Read more](https://logz.io/blog/prometheus-influxdb/)                                                                                                                  |
-| GoJek                   | [Ruby? Java? Golang? - How do you choose a language?](https://www.gojek.io/blog/ruby-java-golang)                                                                                                                 |
+| GoJek                   | [Ruby? Java? Golang? - How do you choose a language?](https://www.gojek.io/blog/ruby-java-golang)                                                                       |
 | Zomato                  |                                                                                                                                                                         |
 | Swiggy                  |                                                                                                                                                                         |
