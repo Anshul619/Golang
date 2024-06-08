@@ -2,7 +2,6 @@
 - Go provides very good support for concurrency using [Go Routines or channels](https://go.dev/tour/concurrency/1).
 - They take advantage of efficient memory management strategies and [multicore processor architecture](https://www.techtarget.com/searchdatacenter/definition/multi-core-processor) for implementing concurrency.
 - Go has first-class supports for Concurrency having the ability to use [multi-core processor architectures](https://www.techtarget.com/searchdatacenter/definition/multi-core-processor) to the advantage of the developer and utilize memory efficiently.
-- Roughly 100K go routines can run on a single machine.
 
 # Constructs
 
@@ -66,7 +65,7 @@ func main() {
 - By default, sends and receives block until the other side is ready. 
 - This allows goroutines to synchronize without explicit locks or condition variables.
 
-  ![img.png](assests/gochannel_img.png)
+![img.png](assests/gochannel_img.png)
 
 [Read more](https://www.geeksforgeeks.org/channel-in-golang/)
 
@@ -161,29 +160,10 @@ func main() {
 }
 ````
 
-# Concurrency is not Parallelism
-
-## :star: Difference between concurrent and parallelism in Golang
-- Concurrency is when your program can handle multiple tasks at once while parallelism is when your program can execute multiple tasks at once using multiple processors.
-- In other words, concurrency is a property of a program that allows you to have multiple tasks in progress at the same time, but not necessarily executing at the same time. (i.e. instead of keeping idle while waiting for the blocking call, we optimize and execute another code.)
-- Parallelism is a runtime property where two or more tasks are executed at the same time.
-
-## Why doesn't my program run faster with more CPUs?
-- Whether a program runs faster with more CPUs depends on the problem it is solving. 
-- The Go language provides concurrency primitives, such as goroutines and channels, but concurrency only enables parallelism when the underlying problem is intrinsically parallel. 
-- Problems that are intrinsically sequential cannot be sped up by adding more CPUs, while those that can be broken into pieces that can execute in parallel can be sped up, sometimes dramatically.
-
-Sometimes adding more CPUs can slow a program down. 
-- In practical terms, programs that spend more time synchronizing or communicating than doing useful computation may experience performance degradation when using multiple OS threads. 
-- This is because passing data between threads involves switching contexts, which has significant cost, and that cost can increase with more CPUs.
-
-## How can I control the number of CPUs?
-- The number of CPUs available simultaneously to executing goroutines is controlled by the [GOMAXPROCS](https://pkg.go.dev/runtime) shell environment variable, whose default value is the number of CPU cores available.
-- Programs with the potential for parallel execution should therefore achieve it by default on a multiple-CPU machine.
-
 # References
 - [Go Concurrency Patterns: Timing out, moving on](https://go.dev/blog/concurrency-timeouts)
 - [Crack the top 50 Golang interview questions](https://www.educative.io/blog/50-golang-interview-questions)
 - [Goroutine Leaks - The Forgotten Sender](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)
 - [Mutex in Golang](https://golangdocs.com/mutex-in-golang)
 - [Why is my goroutine not executed?](https://stackoverflow.com/questions/24425987/why-is-my-goroutine-not-executed)
+- [A little about Goroutines in Go!](https://dev.to/jeffotoni/a-little-about-goroutines-in-go-2f0f)
