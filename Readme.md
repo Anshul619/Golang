@@ -3,14 +3,6 @@
 - Go technically is [pass by value](https://stackoverflow.com/questions/47296325/passing-by-reference-and-value-in-go-to-functions).
 - Go is a [case-sensitive language](https://en.wikipedia.org/wiki/Case_sensitivity).
 
-# :star: Why is Golang fast compared to other languages?
-- Golang is faster than other programming languages because of its simple and efficient memory management and [concurrency model](GoRoutines&Channels.md).
-- The compilation process to machine code is very fast and efficient.
-- Additionally, the dependencies are linked to a single binary file thereby putting off dependencies on servers.
-- It also uses a compile-link model for generating executable binaries from the source code.
-
-> To put it simply, if Docker had not been written in Go, it would not have been as successful. ~Solomon Hykes
-
 # Key Features
 
 | Title                                                                                                    | Remarks                                                                                                                                                                                                                                                                                          |
@@ -29,17 +21,6 @@
 | [Packages](Packages.md)                                                                                  | In go, code is organized using packages.                                                                                                                                                                                                                                                         |
 | [Modules](Modules.md)                                                                                    | Modules represent an app/service in Go.                                                                                                                                                                                                                                                          |
 | [Comments & Documentation in Go](CommentsGo.md)                                                          | -                                                                                                                                                                                                                                                                                                |
-
-# :+1: What are the advantages of Golang over other languages?
-
-| Advantage                      | Description                                                                                                                                                                         |
-|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Simple and Understandable      | Go was developed by keeping simplicity, maintainability and readability in mind.                                                                                                    |
-| Standard Powerful Library      | Go supports all standard libraries and packages that help in writing code easily and efficiently.                                                                                   |
-| :star: Support for concurrency | Go provides very good support for [concurrency using  Go Routines or channels](GoRoutines&Channels.md).                                                                             |
-| Static Type Checking           | Go is a very strong and [statically typed programming language.](OOPsGo/TypesGo.md)<br/>- This ensures that the code is type-safe and all type conversions are handled efficiently. |
-| Easy to install binaries       | Go provides support for generating binaries for the applications with all required dependencies.                                                                                    |
-| Good Testing Support           | Go has good support for [writing unit test cases](UnitTestingGo.md) along with our code.                                                                                            |
 
 # What do you understand by Golang string literals?
 - String literals are those variables storing string constants that can be a single character or that can be obtained as a result of the concatenation of a sequence of characters. 
@@ -175,6 +156,7 @@ default:
 
 # References
 - [Frequently Asked Questions (FAQ)](https://go.dev/doc/faq)
+- [Go at Google: Language Design in the Service of Software Engineering](https://go.dev/talks/2012/splash.article#TOC_1)
 - [Golang Interview Questions](https://www.interviewbit.com/golang-interview-questions/)
 - [Using Modules and Packages in Go](https://levelup.gitconnected.com/using-modules-and-packages-in-go-36a418960556)
 - [Why Golang Is Taking Over the Software Industry?](https://betterprogramming.pub/why-golang-is-about-to-take-over-the-software-industry-fb48174a4cf)
