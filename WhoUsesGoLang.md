@@ -26,5 +26,3 @@
 | Swiggy               |                                                                                                                                                                         |
 | RazorPay             |                                                                                                                                                                         |
 | BharatPe             |                                                                                                                                                                         |
-
-# References
