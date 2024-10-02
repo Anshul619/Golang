@@ -7,7 +7,7 @@
 | Run subtests by `t.Run()`                                                      |                                                                                                                         |
 | Log the error and mark the test failed by calling `t.Errorf()` or `t.Fatal()`. | Fatal is equivalent to Print() followed by a call to os.Exit(1).                                                        |
 | go test -v                                                                     | Run `go test` command in that directory.<br/>- That script finds the Test functions, builds a test binary, and runs it. |
-| go test -v -run TestSquare                                                     | Run specific `TestSquare` test                                                                                            |
+| go test -v -run TestSquare                                                     | Run specific `TestSquare` test                                                                                          |
 
 # Example Tests
 

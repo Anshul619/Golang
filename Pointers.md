@@ -4,7 +4,7 @@
 - For instance, passing an int value to a function makes a copy of the int, and passing a pointer value makes a copy of the pointer, but not the data it points to.
 
 ## :star: Map & Slices are passed by reference
-- Map, [Channels](GoRoutines&Channels.md) and [slice values](SlicesGo.md) are passed by reference.
+- Map, [Channels](GoRoutines&Channels) and [slice values](Slices.md) are passed by reference.
 - They are descriptors that contain pointers to the underlying map or slice data.
 - i.e. If you pass a slice into a function, the function can modify its contents (*) and the modifications will be visible to the caller once it returns.
 - i.e. Copying a map or slice value doesn't copy the data it points to. Copying an interface value makes a copy of the thing stored in the interface value.
@@ -18,7 +18,7 @@ Important Note:
 | Operator     | Description                                                                                                                                                                                                                                                                     |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `&` operator | This operator is called the [address operator](https://www.techopedia.com/definition/25580/address-of-operator--c) and is used for returning the address of the variable stored in the pointer.                                                                                 |
-| `*` operator | This operator is called a [dereferencing operator](https://en.wikipedia.org/wiki/Dereference_operator) and is used for accessing the value in the address stored by the pointer.<br/>- When `*` is placed before a [type](OOPsGo/TypesGo.md), it means that we are working with a pointer to a [type](OOPsGo/TypesGo.md). |
+| `*` operator | This operator is called a [dereferencing operator](https://en.wikipedia.org/wiki/Dereference_operator) and is used for accessing the value in the address stored by the pointer.<br/>- When `*` is placed before a [type](OOPs/TypesGo.md), it means that we are working with a pointer to a [type](OOPs/TypesGo.md). |
 
 ```go
 x := 100

@@ -52,7 +52,7 @@ func (ce CommandExecutor) Execute(command *Command) ([]byte, error) {
 
 # Open/Closed Principle
 - In Golang there is no concept of generalization.
-- Reusability is available as a form of [embedding](Interfaces.md).
+- Reusability is available as a form of [embedding](OOPs/Interfaces.md).
 
 > “A module should be open for extensions, but closed for modification” — Robert C. Martin
 
@@ -120,8 +120,8 @@ type CommandWithInput interface {
 ````
 
 ## Interface segregation principle
-- In Golang [interfaces](Interfaces.md) are satisfied implicitly, rather than explicitly, which makes it easier to extend a class behaviour by implementing [multiple interface](Interfaces.md) based on needs.
-- It also encourages to the design of small and reusable [interfaces](Interfaces.md).
+- In Golang [interfaces](OOPs/Interfaces.md) are satisfied implicitly, rather than explicitly, which makes it easier to extend a class behaviour by implementing [multiple interface](OOPs/Interfaces.md) based on needs.
+- It also encourages to the design of small and reusable [interfaces](OOPs/Interfaces.md).
 
 > “Many client specific interfaces are better than one general purpose interface” — Robert C. Martin
 

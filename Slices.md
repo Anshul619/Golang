@@ -1,5 +1,5 @@
 # What is "slice" in Go?
-- [Slice](https://go.dev/blog/slices-intro) in Go is a lightweight data structure of variable length sequence for storing homogeneous data.
+- [Slice](https://go.dev/blog/slices-intro) in Go, is a lightweight data structure of variable length sequence for storing homogeneous data.
 - It is more convenient, powerful and flexible than an array in Go.
 
 ```go

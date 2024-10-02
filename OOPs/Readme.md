@@ -25,7 +25,7 @@
 | Interface Segregation                                       | :white_check_mark:     | [Interfaces](Interfaces.md) can be defined in GoLang.                                                                                                                                                                                                                    |
 | Dependency inversion principle                              | :white_check_mark:     | Yes, through [interfaces](Interfaces.md) in GoLang.                                                                                                                                                                                                                      |
 
-[Read more about SOLID Principles in GoLang](SOLIDPrinciplesInGo.md)
+[Read more about SOLID Principles in GoLang](../SOLIDPrinciples.md)
 
 # Why is there no type inheritance in Go?
 - Object-oriented programming involves too much discussion of the relationships between types, relationships that often could be derived automatically.
