@@ -162,3 +162,4 @@ default:
 - [Why Golang Is Taking Over the Software Industry?](https://betterprogramming.pub/why-golang-is-about-to-take-over-the-software-industry-fb48174a4cf)
 - [Companies Using Golang: Top 7 Famous Apps You Use Daily](https://brainhub.eu/library/companies-using-golang)
 - [Golang In Ecommerce](https://reemishirsath.medium.com/golang-in-ecommerce-ac87a8512e75)
+- [Optimizing Go Microservices for Low Latency & High Throughput](https://muratdemirci.com.tr/en/optimizing-go-microservices/)
