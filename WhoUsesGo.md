@@ -26,3 +26,12 @@
 | Swiggy               |                                                                                                                                                                         |
 | RazorPay             |                                                                                                                                                                         |
 | BharatPe             |                                                                                                                                                                         |
+
+# Others
+- Monzo - Building their banking system
+- Netflix - Application data caching using SSDs
+- Microsoft - Cloud Infrastructure
+- American Express - Payments & Rewards Platform
+- Twitch - Low latency systems
+- Uber - GPU power analytics engine
+- X - Handling 5 billion sessions daily
