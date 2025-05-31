@@ -65,7 +65,7 @@ func main() {
 - By default, sends and receives block until the other side is ready. 
 - This allows goroutines to synchronize without explicit locks or condition variables.
 
-![img.png](assests/gochannel_img.png)
+![img.png](../assests/gochannel_img.png)
 
 [Read more](https://www.geeksforgeeks.org/channel-in-golang/)
 
