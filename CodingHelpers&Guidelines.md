@@ -17,6 +17,7 @@
 | :star: String is immutable in Go, while slices are mutable. |||
 | :star: Maps, Slices are passed as reference in function in golang| Hence appending an element to the slice, will not reflect in the caller function. Either pointer needs to be used or new slice would have to be returned.|`sorted := strs` (now, sorted slice would also change as strs is changed)|
 | :star: In order to modify slice, we should use slice index, instead of range variable| ||
+|:star: append() handles nil slices safely|Hence there is no need to check for map existence, during while using append| In `if _, ok := m[key]; ok{m[v] = append(m[v], strs[i])} else {m[v] = []string{strs[i]} }` code, if branch is not necessary|
 
 # Various Go Constructs
 
