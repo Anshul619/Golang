@@ -14,8 +14,8 @@
 | Multiple variables can be assigned by `,`                                                                                                                                                                                                                                                          | Variable Declaration/Initialization   | `j, k, l := "shark", 2.05, 15`                                                                       |
 | Trailing comma is not needed while [initializing struct](OOPs/Structs.md).                                                                                                                                                                                                                       | Struct Initialization                 |                                                                                                     |
 | [Global Variables](https://www.tutorialspoint.com/go/go_scope_rules.htm) initialization                                                                                                                                                                                                            | Global Variables Initialization       | `var g int = 20`                                                                                     |
-| :star: String is immutable in Go|||
-| :star: Maps, Slices are passed as reference in function in golang| Hence appending an element to the slice, will not reflect in the caller function. Either pointer needs to be used or new slice would have to be returned.||
+| :star: String is immutable in Go, while slices are mutable. |||
+| :star: Maps, Slices are passed as reference in function in golang| Hence appending an element to the slice, will not reflect in the caller function. Either pointer needs to be used or new slice would have to be returned.|`sorted := strs` (now, sorted slice would also change as strs is changed)|
 | :star: In order to modify slice, we should use slice index, instead of range variable| ||
 
 # Various Go Constructs
