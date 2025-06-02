@@ -9,7 +9,7 @@
 - i.e. If you pass a slice into a function, the function can modify its contents (*) and the modifications will be visible to the caller once it returns.
 - i.e. Copying a map or slice value doesn't copy the data it points to. Copying an interface value makes a copy of the thing stored in the interface value.
 
-Important Note:
+<code style="color:red">Important Note:</code>
 - [Appending an element to the slice, will not reflect in the caller function](https://stackoverflow.com/questions/21035279/why-does-go-slice-append-not-take-a-reference).
 - Hence, [either pointer needs to be used or new slice would have to be returned](https://stackoverflow.com/questions/52565597/cannot-append-to-slice-inside-a-function).
 
