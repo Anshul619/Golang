@@ -9,7 +9,7 @@ go get golang.org/x/text@v0.3.5 //To add, upgrade, or downgrade a dependency
 
 # How to build and install Go Programs? (Go-CLI commands)
 - Go does have an extensive library, called [the runtime](https://pkg.go.dev/runtime), that is part of every Go program.
-- The runtime library implements garbage collection, [concurrency](GoRoutines&Channels.md), stack management, and other critical features of the Go language.
+- The runtime library implements garbage collection, [concurrency](GoRoutines&Channels), stack management, and other critical features of the Go language.
 - It is important to understand, however, that Go's runtime does not include a virtual machine, such as is provided by the Java runtime.
 - Go programs are compiled ahead of time to native machine code.
 
@@ -29,3 +29,9 @@ go get golang.org/x/text@v0.3.5 //To add, upgrade, or downgrade a dependency
 | [Build Constraints](https://pkg.go.dev/cmd/go#hdr-Build_constraints) | //go:build (linux && 386)                                                                                                                       | A build constraint, also known as a build tag, is a condition under which a file should be included in the package. Build constraints are given by a line comment that begins.                               |
 
 [Read more](https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs)
+
+# go.mod vs DockerFile
+- Use `go.mod` to manage Go code (version, dependencies, modules). 
+- Use Dockerfile to manage the runtime/build environment (Go version, OS, tools).
+  
+They complement each other but serve very different roles.

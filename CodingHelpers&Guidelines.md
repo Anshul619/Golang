@@ -77,13 +77,6 @@
 
 [Read more](https://medium.com/learning-the-go-programming-language/bit-hacking-with-go-e0acee258827)
 
-# fmt package
-
-| Command                                                 | Remarks                                                                         |
-|---------------------------------------------------------|---------------------------------------------------------------------------------|
-| fmt.Sprintf("Welcome to the Tech Palace, %s", customer) | Return the formatted string<br/>- %v is for default format<br/>- %s for string. |
-
-
 # References
 - [Frequently Asked Questions (FAQ) - Go](https://go.dev/doc/faq#overloading)
 - [Effective Go](https://go.dev/doc/effective_go)

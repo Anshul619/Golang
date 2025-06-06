@@ -5,7 +5,7 @@
 - :star: Files in the same package can freely call functions defined in other files.
 - Struct, methods of the package are referenced using dot operator `.`. 
 
-![img.png](assests/gopackages_img.png)
+![img.png](assets/gopackages_img.png)
 
 # Exported Field/Method
 This function takes a name parameter whose type is string.
