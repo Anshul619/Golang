@@ -15,7 +15,6 @@ type single struct{}
 var singleInstance *single
 
 func getInstance() *single {
-	log.Println("getInstance")
 	if singleInstance == nil {
 		once.Do(
 			func() {
