@@ -37,12 +37,10 @@
 | Slice                              | Slice, a fintech company offering credit solutions, uses Go in its backend systems to develop efficient and reliable microservices that support its financial products.                                       |
 | Tata Elxsi                         | Tata Elxsi, a design and technology services company, incorporates Go in developing microservices for various applications, including those in the automotive and media sectors.                              |
 | HDFC Bank                          | HDFC Bank, one of India's premier banking institutions, utilizes Go for backend development to build microservices that enhance their digital banking infrastructure.                                         |
-
-# Others
-- Monzo - Building their banking system
-- Netflix - Application data caching using SSDs
-- Microsoft - Cloud Infrastructure
-- American Express - Payments & Rewards Platform
-- Twitch - Low latency systems
-- Uber - GPU power analytics engine
-- X - Handling 5 billion sessions daily
+| Monzo                              | Building their banking system                                                                                                                                                                                 |
+| Netflix                            | Application data caching using SSDs                                                                                                                                                                           |
+| Microsoft                          | Cloud Infrastructure                                                                                                                                                                                          |
+| American Express                   | Payments & Rewards Platform                                                                                                                                                                                   |
+| Twitch                             | Low latency systems                                                                                                                                                                                           |
+| Uber                               | GPU power analytics engine                                                                                                                                                                                    |
+| X                                  | Handling 5 billion sessions daily                                                                                                                                                                             |

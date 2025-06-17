@@ -1,7 +1,10 @@
 # What are interfaces?
 - [Interfaces](https://gobyexample.com/interfaces) are a special type in Go that define a set of method signatures but do not provide implementations.
-- A [Go type](TypesGo.md) satisfies an interface by implementing the methods of that interface, nothing more.
-- Note - We can't have fields, or methods implementation in interfaces.
+- A [Go type](TypesGo.md) satisfies an interface by implementing the methods of that interface, nothing more. 
+
+> Note - We can't have fields, or methods implementation in interfaces.
+
+# Example
 
 ````go
 type geometry interface {

@@ -31,7 +31,7 @@ func main() {
 
 # Array vs Slice
 - [Slice](https://go.dev/blog/slices-intro) with dynamic length (like arraylist in Java) while Array with constant length.
-- [Sample Code](SampleCode/SampleArraySlice.go)
+- [Sample Code](SampleCodesMisc/SampleArraySlice.go)
 
 ```go
 package main

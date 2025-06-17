@@ -3,7 +3,20 @@
 
 > “Do one thing and do it well” — McIlroy (Unix philosophy)
 
-## Example
+# :star: SOLID principles in GoLang
+
+| Principle                                                   | Supported in GoLang?   | Implementation                                                                                                                                                                                                                                                     |
+|-------------------------------------------------------------|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Single Responsibility Principle                             | :white_check_mark:     | Yes, through [struct](Structs.md)                                                                                                                                                                                                                                        |
+| Open/Closed Principle                                       | :x:                    | No concept of generalization (class-based inheritance). <br/>- Reliability is available through [embedding & interfaces](Interfaces.md).                                                                                                                                 |
+| Liskov substitution principle                               | :x:                    | Instead of class-based inheritance, Golang provides a more powerful approach towards polymorphism via [Interfaces](Interfaces.md) and [Struct Embedding](Structs.md). <br/>- Go polymorphism involves creating many different data types that satisfy a common interface. |
+| Interface Segregation                                       | :white_check_mark:     | [Interfaces](Interfaces.md) can be defined in GoLang.                                                                                                                                                                                                                    |
+| Dependency inversion principle                              | :white_check_mark:     | Yes, through [interfaces](Interfaces.md) in GoLang.                                                                                                                                                                                                                      |
+
+[Read more about SOLID Principles in GoLang](../SOLIDPrinciples.md)
+
+
+# Example
 - CommandFactory and CommandExecutor are loosely coupled via Command module.
 
 ````go
@@ -104,7 +117,7 @@ func (c BarCommand) Execute() ([]byte, error) {
 }
 ````
 
-## Liskov substitution principle
+# Liskov substitution principle
 
 > “Derived methods should expect no more and provide no less” — Robert C. Martin
 
@@ -119,7 +132,7 @@ type CommandWithInput interface {
 }
 ````
 
-## Interface segregation principle
+# Interface segregation principle
 - In Golang [interfaces](OOPs/Interfaces.md) are satisfied implicitly, rather than explicitly, which makes it easier to extend a class behaviour by implementing [multiple interface](OOPs/Interfaces.md) based on needs.
 - It also encourages to the design of small and reusable [interfaces](OOPs/Interfaces.md).
 
@@ -142,7 +155,7 @@ type I3 interface { // consumed by C4
 }
 ````
 
-## Dependency inversion principle
+# Dependency inversion principle
 
 > “Depend upon Abstractions. Do not depend upon concretions” — Robert C. Martin
 

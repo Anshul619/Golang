@@ -3,7 +3,7 @@
 - That is, a function always gets a copy of the thing being passed, as if there were an assignment statement assigning the value to the parameter.
 - For instance, passing an int value to a function makes a copy of the int, and passing a pointer value makes a copy of the pointer, but not the data it points to.
 
-## :star: Map & Slices are passed by reference
+# :star: Map & Slices are passed by reference
 - Map, [Channels](GoRoutines&Channels) and [slice values](Slices.md) are passed by reference.
 - They are descriptors that contain pointers to the underlying map or slice data.
 - i.e. If you pass a slice into a function, the function can modify its contents (*) and the modifications will be visible to the caller once it returns.

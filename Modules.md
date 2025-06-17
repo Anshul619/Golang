@@ -8,7 +8,7 @@ go get golang.org/x/text@v0.3.5 //To add, upgrade, or downgrade a dependency
 ````
 
 # How to build and install Go Programs? (Go-CLI commands)
-- Go does have an extensive library, called [the runtime](https://pkg.go.dev/runtime), that is part of every Go program.
+- Go does have an extensive library, called the [runtime](https://pkg.go.dev/runtime), that is part of every Go program.
 - The runtime library implements garbage collection, [concurrency](GoRoutines&Channels), stack management, and other critical features of the Go language.
 - It is important to understand, however, that Go's runtime does not include a virtual machine, such as is provided by the Java runtime.
 - Go programs are compiled ahead of time to native machine code.

@@ -1,7 +1,31 @@
 # Generics
-- In modern Go, generics offer a way to improve type safety while maintaining flexibility.
+- In [modern Go](https://www.geeksforgeeks.org/go-language/generics-in-golang/), generics offer a way to improve type safety while maintaining flexibility.
 
-# Example
+# Example 1
+
+````
+func PrintSlice[T any](s []T) {
+    for _, v := range s {
+        fmt.Println(v)
+    }
+}
+
+type List[T any] struct {
+    head, tail *element[T]
+}
+
+func (lst *List[T]) Push(v T) {
+    if lst.tail == nil {
+        lst.head = &element[T]{val: v}
+        lst.tail = lst.head
+    } else {
+        lst.tail.next = &element[T]{val: v}
+        lst.tail = lst.tail.next
+    }
+}
+````
+
+# Example 2
 
 ````
 // UserRequest is a request for user information.
