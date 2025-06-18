@@ -2,28 +2,6 @@
 - [Panic & Recover](https://golangbot.com/panic-and-recover/) is like exception in GoLang.
 - There is no try-&-catch in GoLang.
 
-# Return errors 
-- [Errors](https://golangbot.com/custom-errors/) can be returned as multiple values from a function in Go
-
-````go
-package errors
-
-// New returns an error that formats as the given text.
-// Each call to New returns a distinct error value even if the text is identical.
-func New(text string) error {  
-        return &errorString{text}
-}
-
-// errorString is a trivial implementation of error.
-type errorString struct {  
-        s string
-}
-
-func (e *errorString) Error() string {  
-        return e.s
-}
-````
-
 # Types of Error Logging
 
 | Log                | Description                           |
@@ -35,7 +13,7 @@ func (e *errorString) Error() string {
 - A [defer](https://go.dev/tour/flowcontrol/12) statement defers the execution of a function until the surrounding function returns.
 - The deferred call's arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.
 
-## Not use defer in for-loop
+## Don't use defer in for-loop
 - Don’t [defer](http://go-database-sql.org/retrieving.html) within a loop.
 - A deferred statement doesn't get executed until the function exits, so a long-running function shouldn’t use it.
 - If you do, you will slowly accumulate memory.

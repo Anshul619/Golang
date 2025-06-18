@@ -21,8 +21,5 @@ func CelsiusFreezingTemp() int {
 }
 ````
 
-# Golint
-- [Golint](https://github.com/golang/lint) is a great tool to check for missing comments and other common stylistic issues, which you can read more about at [Effective Go](https://go.dev/doc/effective_go).
-
 # References
 - [Comments in Go](https://exercism.org/tracks/go/concepts/comments)

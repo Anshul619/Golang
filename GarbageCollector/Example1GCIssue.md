@@ -3,7 +3,7 @@
 - We noticed spikes in request latency and occasional missed SLAs under heavy load.
 
 # Investigation
-- After investigation with [pprof](../Profiling.md) and [runtime.ReadMemStats](../Profiling.md), we saw that the service was creating a large number of short-lived small objects (e.g., slices, JSON intermediate structs) per request.
+- After investigation with [pprof](../ToolsProfiling/Profiling.md) and [runtime.ReadMemStats](../ToolsProfiling/Profiling.md), we saw that the service was creating a large number of short-lived small objects (e.g., slices, JSON intermediate structs) per request.
 - This led to high allocation rates, causing the GC to trigger frequently.
 - Even though Go's GC pause times were short (under a millisecond), the frequent GC cycles increased CPU usage and contributed to latency jitter.
 
