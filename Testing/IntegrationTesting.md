@@ -3,7 +3,6 @@
 
 # Characteristics
 
-|                                                     |
 |-----------------------------------------------------|
 | Slower                                              |
 | May be non-deterministic (e.g., network latency)    |

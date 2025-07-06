@@ -36,7 +36,7 @@ statement(s);
 
 # How can we check if the Go map contains a key?
 
-![img.png](../assets/go_map_img.png)
+![img.png](assets/go_map_img.png)
 
 ```go
 if val, isExists := map_obj["foo"]; isExists {

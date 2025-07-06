@@ -1,5 +1,4 @@
-# What are go modules?
-- The Go toolchain has a built-in system for managing versioned sets of related packages, known as [modules](https://go.dev/doc/tutorial/create-module).
+# Go modules
 - Similar to a standard Go package, a [module may contain any number of packages and sub-packages](https://www.digitalocean.com/community/tutorials/how-to-use-go-modules), or it may contain none at all.
 
 ````go
@@ -7,11 +6,13 @@ go mod init example/project //Create module
 go get golang.org/x/text@v0.3.5 //To add, upgrade, or downgrade a dependency
 ````
 
-# How to build and install Go Programs? (Go-CLI commands)
+# Go runtime
 - Go does have an extensive library, called the [runtime](https://pkg.go.dev/runtime), that is part of every Go program.
-- The runtime library implements [garbage collection](../GarbageCollector/Readme.md), [concurrency](../ConcurrencyGoRoutines), stack management, and other critical features of the Go language.
-- It is important to understand, however, that Go's runtime does not include a virtual machine, such as is provided by the Java runtime.
+- The runtime library implements [garbage collection](../GarbageCollector/Readme.md), [concurrency](https://github.com/Anshul619/Concurrency-Go), stack management, and other critical features of the Go language.
+- It is important to understand, however, that Go's runtime **does not include** a virtual machine, such as is provided by the Java runtime.
 - Go programs are compiled ahead of time to native machine code.
+
+# Go cli commands
 
 | Title                                                                | Command                                                                                                                                         | Remarks                                                                                                                                                                                                      |
 |----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -29,9 +30,3 @@ go get golang.org/x/text@v0.3.5 //To add, upgrade, or downgrade a dependency
 | Run go tests                                                         | go test                                                                                                                                         | Runs any tests associated with the current project                                                                                                                                                           |                                                                                                                                                           |
 
 [Read more](https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs)
-
-# go.mod vs DockerFile
-- Use `go.mod` to manage Go code (version, dependencies, modules). 
-- Use Dockerfile to manage the runtime/build environment (Go version, OS, tools).
-  
-They complement each other but serve very different roles.
