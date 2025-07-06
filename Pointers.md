@@ -18,7 +18,7 @@
 | Operator     | Description                                                                                                                                                                                                                                                                     |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `&` operator | This operator is called the [address operator](https://www.techopedia.com/definition/25580/address-of-operator--c) and is used for returning the address of the variable stored in the pointer.                                                                                 |
-| `*` operator | This operator is called a [dereferencing operator](https://en.wikipedia.org/wiki/Dereference_operator) and is used for accessing the value in the address stored by the pointer.<br/>- When `*` is placed before a [type](OOPs/TypesGo.md), it means that we are working with a pointer to a [type](OOPs/TypesGo.md). |
+| `*` operator | This operator is called a [dereferencing operator](https://en.wikipedia.org/wiki/Dereference_operator) and is used for accessing the value in the address stored by the pointer.<br/>- When `*` is placed before a [type](https://github.com/Anshul619/LLD-OOPs-Design-Patterns-Go/OOPs/TypesGo.md), it means that we are working with a pointer to a [type](https://github.com/Anshul619/LLD-OOPs-Design-Patterns-Go/OOPs/TypesGo.md). |
 
 ```go
 x := 100
