@@ -4,6 +4,7 @@
 - The packages can be imported to our source file by writing: `import <package_name>`.
 - :star: Files in the same package can freely call functions defined in other files.
 - Struct, methods of the package are referenced using dot operator `.`. 
+- :star: Packages are also helpful to include reusable code/libraries (through github repos and packages)
 
 ![img.png](../assets/gopackages_img.png)
 
