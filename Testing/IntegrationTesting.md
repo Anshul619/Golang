@@ -1,5 +1,6 @@
 # Integration Testing
 - Test how components work together — includes external systems (DB, API, file system, etc.)
+- Use test containers or dockertest for DBs in integration tests
 
 # Characteristics
 
