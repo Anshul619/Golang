@@ -1,5 +1,5 @@
 # :star: Why is Golang fast compared to other languages?
-- Golang is faster than other programming languages because of its simple and efficient memory management and [concurrency model](https://github.com/Anshul619/Concurrency-Go/blob/main/readme.md).
+- Golang is faster than other programming languages because of its simple, efficient memory management and [concurrency model](https://github.com/Anshul619/Concurrency-Go/blob/main/readme.md).
 - The compilation process to machine code is very fast and efficient.
 - Additionally, the dependencies are linked to a single binary file thereby putting off dependencies on servers.
 - It also uses a compile-link model for generating executable binaries from the source code.
