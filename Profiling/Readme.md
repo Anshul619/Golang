@@ -1,10 +1,10 @@
 # Profiling
 
-|                          | Package                                                          |
-|--------------------------|------------------------------------------------------------------|
-| Profiling with benchmark | go test -bench="." -cpuprofile='cpu.prof' -memprofile='mem.prof' |
-| Runtime Profiling        | runtime/pprof                                                    |
-| Active Web Profiling     | net/http/pprof                                                   |
+|                          | Package                                                            |
+|--------------------------|--------------------------------------------------------------------|
+| Profiling with benchmark | `go test -bench="." -cpuprofile='cpu.prof' -memprofile='mem.prof'` |
+| Runtime Profiling        | runtime/pprof                                                      |
+| Active Web Profiling     | net/http/pprof                                                     |
 
 [Read more](https://github.com/google/pprof)
 

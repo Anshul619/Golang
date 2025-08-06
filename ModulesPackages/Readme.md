@@ -6,3 +6,6 @@
 go mod init example/project // Create module with name "example/project"
 go get golang.org/x/text@v0.3.5 // To add, upgrade, or downgrade a dependency
 ````
+
+# References
+- [Go module proxy at Grab](https://engineering.grab.com/go-module-proxy)
