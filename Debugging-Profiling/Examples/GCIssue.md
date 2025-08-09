@@ -3,16 +3,16 @@
 - We noticed spikes in request latency and occasional missed SLAs under heavy load.
 
 # Investigation
-- After investigation with [pprof](../Readme.md) and [runtime.ReadMemStats](../Readme.md), we saw that the service was creating a large number of short-lived small objects (e.g., slices, JSON intermediate structs) per request.
-- This led to high allocation rates, causing the GC to trigger frequently.
+- After investigation with [pprof](../pprof.md) and [runtime.ReadMemStats](../pprof.md), we saw that the service was creating a large number of short-lived small objects (e.g. slices, JSON intermediate structs) per request.
+- This led to high allocation rates, causing the [garbage collector](../../GarbageCollector/Readme.md) to trigger frequently.
 - Even though Go's GC pause times were short (under a millisecond), the frequent GC cycles increased CPU usage and contributed to latency jitter.
 
-# Solution
+# Solutions
 
 |                            | Description                                                                                                                                                           |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Object pooling             | We introduced **sync.Pool** for temporary buffers and reusable objects (like JSON decoders and pre-allocated slices). This significantly reduced allocation pressure. |
-| Zero-copy techniques       | Where possible, we processed incoming data without intermediate allocations — e.g., using json.Decoder directly on streams rather than marshalling/unmarshalling.     |
+| Zero-copy techniques       | Where possible, we processed incoming data without intermediate allocations — e.g. using json.Decoder directly on streams rather than marshalling/unmarshalling.      |
 | Tuned GOGC                 | We experimented with GOGC settings to balance heap growth and GC frequency, ultimately increasing it slightly to reduce GC frequency under high load.                 |
 | Allocation profiling in CI | We added allocation benchmarks to ensure future changes didn’t regress.                                                                                               |
 
