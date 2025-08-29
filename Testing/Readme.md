@@ -18,6 +18,14 @@
 - They are a method of validating a function or method against multiple parameters and results. 
 - When a table contains multiple test cases, the test simply iterates through all table entries and runs the necessary tests.
 
+# Frameworks
+
+| Framework                                       | Remarks                                                                                                                                                                |
+|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Testify](https://github.com/stretchr/testify)  | [Easy assertion](https://github.com/stretchr/testify?tab=readme-ov-file#assert-package), [Mock](https://github.com/stretchr/testify?tab=readme-ov-file#assert-package) |
+| [gomock](https://github.com/uber-go/mock)       | gomock is a mocking framework for the Go programming language. <br/>- It integrates well with Go's built-in testing package, but can be used in other contexts too.    |
+| [httpmock](https://github.com/jarcoal/httpmock) | Easy mocking of http responses from external resources.                                                                                                                |
+
 # References
 - [How to write unit tests in GoLang?](https://blog.alexellis.io/golang-writing-unit-tests/)
 - [Comprehensive Guide to Testing in Go](https://blog.jetbrains.com/go/2022/11/22/comprehensive-guide-to-testing-in-go/)
