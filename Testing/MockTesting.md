@@ -1,10 +1,13 @@
 # Mock Testing
 - This is helpful to test a function by mocking internal function calls (external api, db calls)
 
-# Best Practices
+# Mockgen command
+- [mockgen](ttps://github.com/uber-go/mock/tree/main/mockgen) is a tool from the golang/mock package that automatically generates mock implementations from interfaces.
 
-| Title                                                                           | Description                                                                                                                            |
-|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Depending on **interfaces** is a best practice for testability and flexibility. | Interfaces help in dependency inversion, mocking methods of objects.                                                                   |
-| Never Marshal Mocks (or structs embedding mock.Mock)                            | Mocks are for simulating behavior, not for data. You must replace mocks with real or fake data before marshalling.                     |
-| Manual mocks (vs [gomock](https://github.com/uber-go/mock) framework)           | No external dependencies or code generation.<br/>- Full control over mocked behavior.<br/>-Perfect for small projects or simple tests. |
+## Example usages
+
+````shell
+go install github.com/golang/mock/mockgen@latest
+mockgen -source=cmd/payments/interfaces.go -destination=cmd/payments/interfaces_mock.go -package=payments
+````
+- It generates a mock struct with methods that allow you to specify expected inputs and outputs.
