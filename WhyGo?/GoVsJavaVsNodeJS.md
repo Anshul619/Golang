@@ -1,6 +1,6 @@
 # GoLang vs Java vs NodeJS
 
-| Feature                 | :star: [GoLang](https://github.com/Anshul619/golang)               | [Java](https://github.com/Anshul619/java)                                                  | [Node](NodeJs.md) (or Python)                                                                     |
+| Feature                 | :star: GoLang                                                      | [Java](https://github.com/Anshul619/java)                                                  | Node (or Python)                                                                                  |
 |-------------------------|--------------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | Multi-Threaded?         | :white_check_mark: Yes, through GoRoutine (light-weighted threads) | :white_check_mark: Yes (OS threads)                                                        | No                                                                                                |
 | Statically Typed?       | :white_check_mark: Yes                                             | :white_check_mark: Yes                                                                     | No                                                                                                |
