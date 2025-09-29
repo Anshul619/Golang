@@ -23,5 +23,11 @@
 | Efficient Garbage Collection   | [Read more](../GarbageCollector)                                                                                                                                                                                                                                                                                   |
 | Memory Efficient               | Go is designed to be memory efficient with lessor memory footprint (due to efficient [Garbage Collection](../GarbageCollector), no class/object overhead, no virtual machine, efficient [concurrency model](https://github.com/Anshul619/Concurrency-Go/blob/main/readme.md)), which saves hardware costs as well. |
 
+# :-1: What are disadvantages of Golang?
+
+|                                               | Remarks                                                         |
+|-----------------------------------------------|-----------------------------------------------------------------|
+| Performance Bottleneck for CPU Bound workload | [Read more](https://wxiaoyun.com/blog/rust-rewrite-case-study/) |
+
 # References
 - [Is there a favoured language for microservices development at Google (say, Go)? Why?](https://www.quora.com/Is-there-a-favoured-language-for-microservices-development-at-Google-say-Go-Why)
