@@ -4,7 +4,7 @@
 # Mockgen command
 - [mockgen](ttps://github.com/uber-go/mock/tree/main/mockgen) is a tool from the golang/mock package that automatically generates mock implementations from interfaces.
 
-## Example usages
+# Example usages
 
 ````shell
 go install github.com/golang/mock/mockgen@latest
