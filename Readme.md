@@ -1,5 +1,5 @@
 # What is Golang?
-- [Go](https://go.dev/) is a high level, general-purpose programming language that is [very strongly and statically typed](https://github.com/Anshul619/LLD-OOPs-Design-Patterns-Go/OOPs/TypesGo.md) by providing support for garbage collection and [concurrent programming](https://github.com/Anshul619/Concurrency-Go).
+- [Go](https://go.dev/) is a high level, general-purpose programming language that is [very strongly and statically typed](https://github.com/Anshul619/LLD-OOPs-Design-Patterns-Go/OOPs/TypesGo.md) by providing support for [garbage collection](GarbageCollector/Readme.md) and [concurrent programming](https://github.com/Anshul619/Concurrency-Go).
 - Go technically is [pass by value](Pointers.md).
 - Go is a [case-sensitive language](https://en.wikipedia.org/wiki/Case_sensitivity).
 
